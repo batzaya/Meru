@@ -10,7 +10,7 @@ class catAdmin(admin.ModelAdmin):
 
 
 class infoAdmin(admin.ModelAdmin):
-    list_display = ["title_mn", "description", "published_date"]
+    list_display = ["title_mn", "description_en", "published_date"]
 
 
 class picAdmin(admin.ModelAdmin):
