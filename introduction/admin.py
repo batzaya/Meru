@@ -11,6 +11,11 @@ class CatAdmin(admin.ModelAdmin):
 
 class InfoAdmin(admin.ModelAdmin):
     list_display = ["title_mn", "description_en", "published_date"]
+    class Media(admin.ModelAdmin):
+	    js = [
+		'../static/introduction/tinymce/js/tinymce/tinymce.min.js',
+		'../static/introduction/js/tinymce_setup.js',
+	    ]
 
 
 class PicAdmin(admin.ModelAdmin):
@@ -18,6 +23,7 @@ class PicAdmin(admin.ModelAdmin):
 
 class ContactAdmin(admin.ModelAdmin):
     list_display = ["email", "subject" , "name", "message", "sent_at"]
+
 
 admin.site.register(Menu, MenuAdmin)
 admin.site.register(Contact, ContactAdmin)
